@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Report</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+
+    <script src="js/download.data.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]     -->
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="container">
+            <a href="https://www.kdclab.com/"><img src="img/logo.jpg" alt="scanron logo"></a>
+            <a href="action/logout.php" class="logout-btn"><i class="fas fa-power-off"></i>Logout</a>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" style="margin-bottom: 7px !important;">
+                <div class="reports-wrapper">
+                    <h3>Results</h3>
+
+                    <div class="col-md-12">
+                        <h4>Patient Details</h4>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <font>Lab No:</font>
+                                KDCC-27006
+                            </div>
+                            <div class="col-md-6">
+                                <font>Date:</font>
+                                09-01-2022
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <font>Patient Name:</font>
+                                Sandya Hariprasad
+                            </div>
+                            <div class="col-md-6">
+                                <font>Age:</font>
+                                30
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <font>Mobile:</font>
+                                9632826924
+                            </div>
+                            <div class="col-md-6">
+                                <font>Address:</font>
+                                Sree Hari Nivas, Machinadukkam(H),
+                                Paravanadukkam PO,
+                                kasaragod, Kerala, PIN 671317
+                            </div>
+                        </div>
+
+
+                        <div class="card mx-2" style="width: 100%;">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span class="" style="border: solid 1px #fff;">
+                                        <div style="width: 40%;float: left;">Lab No.</div>
+                                        <div style="width: 40%;float: right;">32801</div>
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="" style="border: solid 1px #fff;">
+                                        <div style="width: 40%;float: left;">Name</div>
+                                        <div style="width: 40%;float: right;">GENERAL REPORT</div>
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+
+                                    <span class="" style="border: solid 1px #fff;">
+                                        <div style="width: 40%;float: left;">Date</div>
+                                        <div style="width: 40%;float: right;margin-top: -8px !important;"> <button
+                                                type="button" class="btn btn-info"> <i class="fas fa-search">
+                                                </i> View</button></div>
+                                    </span>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="" style="border: solid 1px #fff;">
+                                        <div style="width: 40%;float: left;">Age</div>
+                                        <div style="width: 40%;float: right; margin-top: -8px !important;">
+                                            <button type="button" class="btn btn-success" onclick="reportdownload()"><i
+                                                    class="fas fa-download">
+                                                </i> Download</button>
+
+                                            <!-- <a href="data:application/pdf,data/test.pdf" target="_blank"
+                                                    download="test.pdf">Download </a> -->
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="reports-wrapper">
+                    <h3>Results</h3>
+
+                    <div class="col-md-12">
+                        <h4>Patient Details</h4>
+
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <font>Lab No:</font>
+                            </div>
+                            <div class="col-md-6">
+                                <font>Date:</font>
+                                01-01-1970
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <font>Patient Name:</font>
+                            </div>
+                            <div class="col-md-6">
+                                <font>Age:</font>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <font>Mobile:</font>
+                            </div>
+                            <div class="col-md-6">
+                                <font>Address:</font>
+                            </div>
+                        </div>
+
+
+
+
+                        <h5 class="checkmsg blink">Results will be updated soon, Please check back later</h5>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div> -->
+
+
+    <div class="footer-wrapper">
+        <div class="container">
+            © Copyright 2021 Icon Infoware Technologies
+            <font>Powered by <a href="http://iconinfoware.com/" target="_blank">Icon Infoware Technologies</a></font>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
